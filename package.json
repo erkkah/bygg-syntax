@@ -1,0 +1,26 @@
+{
+    "name": "bygg",
+    "displayName": "bygg",
+    "description": "Syntax highlighting for bygg",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bygg",
+            "aliases": ["bygg", "bygg"],
+            "filenames": ["byggfil"],
+            "extensions": ["bygg"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "bygg",
+            "scopeName": "source.bygg",
+            "path": "./syntaxes/bygg.tmLanguage.json"
+        }]
+    }
+}

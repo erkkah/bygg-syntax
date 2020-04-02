@@ -1,0 +1,106 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "bygg",
+	"patterns": [
+		{
+			"include": "#templates"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#assignments"
+		},
+		{
+			"include": "#dependencies"
+		},
+		{
+			"include": "#actions"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"templates": {
+			"begin": "{{",
+			"end": "}}",
+
+			"captures": {
+				"0": {"name": "meta.preprocessor"}
+			},
+			"patterns": [
+				{
+					"match": "\\b(if|else|range|end|with)\\b",
+					"captures": {
+						"1": {"name": "keyword.control.bygg"}
+					}
+				},
+				{
+					"include": "#strings"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.bygg",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.bygg",
+					"match": "\\\\."
+				},
+				{
+					"include": "#variables"
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.bygg",
+			"match": "^([ \\t])*#.*$"
+		},
+		"assignments": {
+			"match": "^([ \\t]*)([\\.\\w]+)\\s*(\\+?=)\\s*",
+			"captures": {
+				"2": {"name": "variable.name.bygg"},
+				"3": {"name": "keyword.operator.bygg"}
+			}
+		},
+		"dependencies": {
+			"match": "^([ \\t]*)(\\S+)\\s*(:)\\s*",
+			"captures": {
+				"2": {
+					"name": "entity.name.tag",
+					"patterns": [
+						{
+							"include": "#variables"
+						}
+					]
+				},
+				"3": {"name": "keyword.operator.bygg"}
+			}
+		},
+		"actions": {
+			"match": "^([ \\t]*)(\\S+)\\s*(<-)\\s*",
+			"captures": {
+				"2": {
+					"name": "entity.name.function",
+					"patterns": [
+						{
+							"include": "#variables"
+						}
+					]
+				},
+				"3": {"name": "keyword.operator.bygg"}
+			}
+		},
+		"variables": {
+			"match": "\\$[{]?\\w+[}]?",
+			"name": "variable"
+		}
+	},
+	"scopeName": "source.bygg"
+}
