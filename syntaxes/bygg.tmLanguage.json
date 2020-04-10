@@ -98,7 +98,7 @@
 			}
 		},
 		"variables": {
-			"match": "\\$[{]?\\w+[}]?",
+			"match": "\\$[{]?[.\\w]+[}]?",
 			"name": "variable"
 		}
 	},
