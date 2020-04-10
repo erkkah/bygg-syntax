@@ -1,4 +1,4 @@
-# `bygg` syntax highlighting
+# bygg! syntax highlighting
 
 VS Code syntax highlighting for the "bygg!" build script runner
 
