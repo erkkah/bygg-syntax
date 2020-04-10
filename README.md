@@ -1,6 +1,6 @@
 # `bygg` syntax highlighting
 
-VS Code syntax highlighting for the "bygg" build script runner
+VS Code syntax highlighting for the "bygg!" build script runner
 
 ## Highlights
 

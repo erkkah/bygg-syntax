@@ -2,7 +2,7 @@
     "name": "bygg-syntax",
     "displayName": "bygg! syntax highlighting",
     "description": "Syntax highlighting for bygg! build scripts",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "license": "ISC",
     "repository": {
         "type": "git",
