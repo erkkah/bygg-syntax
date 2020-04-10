@@ -1,19 +1,36 @@
 {
-    "name": "bygg",
-    "displayName": "bygg",
-    "description": "Syntax highlighting for bygg",
+    "name": "bygg-syntax",
+    "displayName": "bygg! syntax highlighting",
+    "description": "Syntax highlighting for bygg! build scripts",
     "version": "0.0.1",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/erkkah/bygg-syntax.git"
+    },
+    "bugs": "https://github.com/erkkah/bygg-syntax/issues",
+    "author": {
+        "name": "Erik Agsjö",
+        "email": "erik@naivecircuits.com"
+    },
+    "publisher": "naivecircuits",
+    "icon": "./icon.png",
+    "galleryBanner": {
+        "color": "#2feb8d",
+        "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.43.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "keywords": ["syntax", "highlighting"],
     "contributes": {
         "languages": [{
             "id": "bygg",
             "aliases": ["bygg", "bygg"],
-            "filenames": ["byggfil"],
+            "filenames": ["byggfil", "byggfile"],
             "extensions": ["bygg"],
             "configuration": "./language-configuration.json"
         }],
