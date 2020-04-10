@@ -14,7 +14,7 @@
         "email": "erik@naivecircuits.com"
     },
     "publisher": "naivecircuits",
-    "icon": "./icon.png",
+    "icon": "icon.png",
     "galleryBanner": {
         "color": "#2feb8d",
         "theme": "dark"
